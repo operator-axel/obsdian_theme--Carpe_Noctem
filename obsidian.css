@@ -100,7 +100,7 @@
   
     --text-highlight-bg: rgba(253, 52, 1, 0.493); /*Search Matches*/
     --text-highlight-bg-active: rgba(255, 31, 15, 0.4); /*Active Search Match (Preview Mode)*/
-    --text-selection: rgba(149, 197, 252, 0.99); /*Text Selections*/
+    --text-selection: rgba(73, 65, 44, 0.459); /*Text Selections*/
   
     --interactive-normal: #2a2a2a; /*Button Color*/
     --interactive-hover: #303030; /*Button Hovered Color*/
@@ -338,7 +338,6 @@
   
   /*Highlight*/
   .markdown-preview-view mark {
-
     background-color: var(--color-ver-5);
   } /*Reading View*/
   .cm-s-obsidian.cm-s-obsidian.is-live-preview .cm-highlight {
