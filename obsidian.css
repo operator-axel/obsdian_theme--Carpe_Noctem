@@ -97,6 +97,7 @@
 
   }
   
+  
   /*Dark Theme Variables*/
   .theme-dark {
     --background-modifier-cover: var(--color-grey-7); /*Obsidian Title Bar Bg*/
@@ -257,12 +258,31 @@
   
   /*Folder*/
   .nav-folder {}
-  .nav-folder-title {}
+  
 
-  /*______added ______*/
-  .side-dock-ribbon-action .calendar-with-checkmark {
-    content: url('https://api.iconify.design/ri/calendar-check-fill.svg?color=%23a79f94');
+  
+  /*---- Change the ACTUAL Pointer Indicator in Folder_bar ----*/
+  .nav-folder-collapse-indicator {
+    content: url('https://api.iconify.design/ri/genderless-line.svg?color=%2383bdff');
   }
+  
+  .nav-file-title.is-active .nav-folder-collapse-indicator, .nav-folder-title.is-active .nav-folder-collapse-indicator, body:not(.is-grabbing) .nav-file-title:hover .nav-folder-collapse-indicator, body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
+    color: var(--text-normal);
+    content: url('https://api.iconify.design/ri/genderless-fill.svg?color=%2383bdff');
+  }
+
+
+
+/*---- Folder Icons ----*/
+  .nav-folder-title[data-path] .nav-folder-title-content::before {
+    display: inline-flex;
+    padding: inherit;
+    content: url('https://api.iconify.design/ri/anchor-fill.svg?color=%2383bdff');
+  }
+  
+ 
+
+  
 
 
   /*Files*/
