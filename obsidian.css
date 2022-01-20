@@ -236,9 +236,12 @@
   /*Side Panel: Icons*/
   .workspace-tab-header-inner-icon {
     color: var(--color-tan-7);
-  }
-  
+    display: flex;
+}
+
+
   /*______Added--Workspace ______*/
+  
   .workspace-tab-header.is-active {
     background-color: var(--color-tan-9);
   }
@@ -251,6 +254,43 @@
                 rgba(0, 0, 0, 0.445) inset,
                 0px 2px 4px 2px rgba(0, 0, 0, 0.3);
   }
+/* left sidebar strip -- change background color */
+.workspace-ribbon.mod-left {
+  border-color: transparent;
+  width: 35px;
+  background: var(--background-primary);
+  }
+  /* on left icons: change color */
+.side-dock-ribbon-tab, .side-dock-ribbon-action {
+  color: var(--color-tan-9);
+  text-align: center;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.side-dock-ribbon-tab, .side-dock-ribbon-action:hover {
+  color: var(--color-ver-7);
+  text-align: center;
+}
+
+/* on right change background color */
+.workspace-ribbon.mod-right {
+  border-color: transparent;
+  width: 30px;
+  background: var(--background-primary);
+}
+/* hide Preview/Edit icon, only show on hover */
+.view-action[aria-label*="Preview"], .view-action[aria-label*="Edit"] {
+  opacity: 0;
+}
+
+.view-action:hover {
+  opacity: 1;
+}
+
+.workspace-leaf-content[data-type='search'] .nav-action-button, .workspace-leaf-content[data-type='backlink'] .nav-action-button{
+  padding: 3px 3px 3px 3px;
+}
   /*--File Explorer--*/
   
   /*Nav Top: Create Note, Sort, Create Folder*/
@@ -417,28 +457,28 @@
   
   /***---Headers/Headings---***/
   h1 {
-    color: var(--color-tan-7);
-    font-family: 'Luminari', 'Cabin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
+    color: var(--color-tan-9);
+    font-family: 'Cabin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
   } /*Reading Mode*/
   h2 {
     color: var(--color-tan-7);
-    font-family: 'Luminari', 'Cabin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
+    font-family: 'Cabin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
   } /*Reading Mode*/
   h3 {
     color: var(--color-tan-7);
-    font-family: 'Luminari', 'Cabin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
+    font-family: 'Cabin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
   } /*Reading Mode*/
   h4 {
     color: var(--color-tan-7);
-    font-family: 'Luminari', 'Cabin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
+    font-family: 'Cabin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
   } /*Reading Mode*/
   h5 {
     color: var(--color-tan-7);
-    font-family: 'Luminari', 'Cabin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
+    font-family: 'Cabin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
   } /*Reading Mode*/
   h6 {
     color: var(--color-tan-7);
-    font-family: 'Luminari', 'Cabin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
+    font-family: 'Cabin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
   } /*Reading Mode*/
   .cm-header-1 {} /*Source Mode*/
   .cm-header-2 {} /*Source Mode*/
@@ -448,7 +488,7 @@
   .cm-header-6 {} /*Source Mode*/
   
   .cm-header {
-    font-family: 'Luminari';
+    font-family: 'Cabin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--color-tan-9);
   } /* applies to all source mode headings */
   
@@ -636,12 +676,46 @@
   .frontmatter-container {} /*Reading Mode*/
   .CodeMirror-line .cm-s-obsidian .cm-hmd-frontmatter{} /*Source Mode*/
   
+/*---- Active Line for Dark Theme i.e highlights active line in edit ----*/
+  .cm-active.cm-line {
+    background-color: var(--color-grey-3);
+  }
+  
+/* Reduce space of header buttons/icons - Right Sidebar */
+div.nav-header{
+  padding: 0px 5px 5px 5px;
+  margin-bottom: 0px;
+  margin-top: 5px;
+  line-height: 0px;
+}
+div.nav-buttons-container{
+  margin: 0px 0px 0px 0px;
+}
+input.search-input{
+  margin: 0px 10px -3px 10px;
+}
+.nav-action-button{
+  margin: 0px 2px 0px 2px !important;
+}
+.workspace-leaf-content[data-type='search'] .nav-action-button, .workspace-leaf-content[data-type='backlink'] .nav-action-button{
+  padding: 3px 3px 3px 3px;
+}
+
+/* Fix background of folder-collapse-indicator */
+body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
+  background: none;
+}
+
+/* Line up tabs with macOS traffic lights */
+.hider-frameless .workspace-split.mod-left-split > .workspace-tabs {
+  padding: 0;}
+.workspace-tab-container-inner {
+  padding-left:30px;
+}
+
+
   /*Frontmatter Tag*/
   .frontmatter-container .frontmatter-alias {} /*Reading Mode*/
-  
-  
-  
-  
   
   /*--Embeds--*/
   .markdown-preview-view .markdown-embed {} /*Reading Mode*/
@@ -728,3 +802,158 @@
   
   .graph-controls {} /*Graph Menu*/
   
+
+
+  /*---- 2022-01-19 additions ----*/
+  /*---- Nav Icons -- need to insert 'icon' in all 3 below_and all 5 blocks----*/
+ 
+  /*---- "File Explorer" Icon ----*/
+  /* when the tab is NOT in focus */
+.theme-dark
+.workspace-tab-header[aria-label="File explorer"]
+.workspace-tab-header-inner-icon:after {
+  content: url('https://api.iconify.design/mdi/mustache.svg?color=%236e655a');
+}
+
+.theme-dark
+.workspace-tab-header[aria-label="File explorer"]:hover
+.workspace-tab-header-inner-icon:after {  
+  content: url('https://api.iconify.design/mdi/mustache.svg?color=white');
+}
+
+/* when the tab is in focus */
+.theme-dark
+.workspace-tab-header[aria-label="File explorer"].is-active
+.workspace-tab-header-inner-icon:after {
+  content: url('https://api.iconify.design/mdi/mustache.svg?color=%236e655a');
+}
+
+.workspace-tab-header[aria-label="File explorer"]
+.workspace-tab-header-inner-icon:after,
+.view-header-icon:after,
+.search-input-clear-button:before,
+.document-search-close-button:before {
+line-height: 1;
+display: inline-block;
+width: 24px;
+height: 24px;
+}
+
+.workspace-tab-header[aria-label="File explorer"]
+.workspace-tab-header-inner-icon
+> svg {
+  display: none;
+}
+/*---- "Search" Icon ----*/
+.theme-dark
+.workspace-tab-header[aria-label="Search"]
+.workspace-tab-header-inner-icon:after {
+  content: url('https://api.iconify.design/ri/spy-fill.svg?color=%236e655a');
+  
+}
+
+.theme-dark
+.workspace-tab-header[aria-label="Search"]:hover
+.workspace-tab-header-inner-icon:after {  
+  content: url('https://api.iconify.design/ri/spy-fill.svg?color=white');
+}
+
+/* when the tab is in focus */
+.theme-dark
+.workspace-tab-header[aria-label="Search"].is-active
+.workspace-tab-header-inner-icon:after {
+  content: url('https://api.iconify.design/ri/spy-fill.svg?color=%236e655a');
+}
+
+.workspace-tab-header[aria-label="Search"]
+.workspace-tab-header-inner-icon:after,
+.view-header-icon:after,
+.search-input-clear-button:before,
+.document-search-close-button:before {
+line-height: 1;
+display: inline-block;
+width: 24px;
+height: 24px;
+}
+
+.workspace-tab-header[aria-label="Search"]
+.workspace-tab-header-inner-icon
+> svg {
+  display: none;
+}
+
+/*---- "Recent Files" Icon ----*/
+.theme-dark
+.workspace-tab-header[aria-label="Recent Files"]
+.workspace-tab-header-inner-icon:after {
+  content: url('https://api.iconify.design/mdi/alert-decagram-outline.svg?color=%236e655a');
+  
+}
+
+.theme-dark
+.workspace-tab-header[aria-label="Recent Files"]:hover
+.workspace-tab-header-inner-icon:after {  
+  content: url('https://api.iconify.design/mdi/alert-decagram-outline.svg?color=white');
+}
+
+/* when the tab is in focus */
+.theme-dark
+.workspace-tab-header[aria-label="Recent Files"].is-active
+.workspace-tab-header-inner-icon:after {
+  content: url('https://api.iconify.design/mdi/alert-decagram-outline.svg?color=%236e655a');
+}
+
+.workspace-tab-header[aria-label="Recent Files"]
+.workspace-tab-header-inner-icon:after,
+.view-header-icon:after,
+.search-input-clear-button:before,
+.document-search-close-button:before {
+line-height: 1;
+display: inline-block;
+width: 24px;
+height: 24px;
+}
+
+.workspace-tab-header[aria-label="Recent Files"]
+.workspace-tab-header-inner-icon
+> svg {
+  display: none;
+}
+
+
+/*---- "Starred" Icon ----*/
+.theme-dark
+.workspace-tab-header[aria-label="Starred"]
+.workspace-tab-header-inner-icon:after {
+  content: url('https://api.iconify.design/mdi/lightbulb-variant-outline.svg?color=%236e655a');
+}
+
+.theme-dark
+.workspace-tab-header[aria-label="Starred"]:hover
+.workspace-tab-header-inner-icon:after {  
+  content: url('https://api.iconify.design/mdi/lightbulb-variant-outline.svg?color=white');
+}
+
+/* when the tab is in focus */
+.theme-dark
+.workspace-tab-header[aria-label="Starred"].is-active
+.workspace-tab-header-inner-icon:after {
+  content: url('https://api.iconify.design/mdi/lightbulb-variant-outline.svg?color=%236e655');
+}
+
+.workspace-tab-header[aria-label="Starred"]
+.workspace-tab-header-inner-icon:after,
+.view-header-icon:after,
+.search-input-clear-button:before,
+.document-search-close-button:before {
+line-height: 1;
+display: inline-block;
+width: 24px;
+height: 24px;
+}
+
+.workspace-tab-header[aria-label="Starred"]
+.workspace-tab-header-inner-icon
+> svg {
+  display: none;
+}
