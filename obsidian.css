@@ -165,7 +165,7 @@
   box-sizing: border-box;
   }*/
   
-  /*----Startup Progress Bar Screen----*/
+  /*«« Startup Progress Bar Screen »»*/
   /*Startup Progress Bar Window*/
   .progress-bar {}
   
@@ -181,16 +181,25 @@
   
   /*----Settings----*/
   /*All Popup Windows: Settings*/
-  .modal {}
+  .modal {
+    border-radius: 10px;
+  }
   
   /*Command Palette & Quick Switcher*/
-  .prompt {}
+  .prompt {
+    border-radius: 70px; /*««Rounding edges of CMDpalt & QSwitch»»*/
+  }
   
   /*The notifications in the top right*/
-  .notice {}
+  .notice {
+    border-radius: 50px;
+  }
   
   /*Context Menu (Right CLick sth)*/
-  .menu {}
+  .menu {
+    border-radius: 10px;
+    border-color: var(--color-grey-9);
+  }
   
   /*Setting Dropdown*/
   .dropdown {}
@@ -201,7 +210,6 @@
   /*Community Plugins Browser*/
   .community-plugin {}
   
-  
   /*--Extras--*/
   
   /*Tooltip Popup*/
@@ -210,8 +218,8 @@
 
 ::-webkit-scrollbar {
     visibility: hidden;
-    width: 10px; /* width of vertical scrollbars  */
-    height: 100px; /* height of horizontal scrollbars  */
+    width: 5px; /* width of vertical scrollbars  */
+    height: 5px; /* height of horizontal scrollbars  */
     border-radius: 50px; /* roundedness of scrollbar area */
     background-color: var(--color-grey-9); /* color of scrollbar area  */
 }
@@ -328,7 +336,11 @@
   padding: 3px 3px 3px 3px;
 }
   /*--File Explorer--*/
-  
+  /*~ File Explorer Search Modal ~*/
+.suggestion-container.mod-search-suggestion {
+    border-radius: 30px;
+    border-color: var(--color-grey-9);
+}
   /*Nav Top: Create Note, Sort, Create Folder*/
   .nav-header {}
   
@@ -614,17 +626,19 @@ background-color: var(--color-grey-0);
   
   
   /*--Links--*/
-  .cm-s-obsidian span.cm-hmd-internal-link {} /*Source Mode*/
+  .cm-s-obsidian span.cm-hmd-internal-link {
+    color: var(--color-dt-blue-1);
+  } /*Source Mode*/
   
-  /*Wiki Links*/
+    /*Wiki Links*/
   a.internal-link {} /*Reading Mode*/
   
 
   /*Markdown Links*/
   a.external-link {
-    color: var(--color-dt-blue-2);
+    color: var(--color-dt-blue-3);
   } /*Reading Mode*/
-  
+ 
   /*Link to No Page*/
   a.internal-link.is-unresolved {
     color: var(--color-dt-blue-3);
@@ -684,32 +698,24 @@ background-color: var(--color-grey-0);
     background-repeat: no-repeat;
     content: url('https://api.iconify.design/ant-design/check-circle-twotone.svg?color=%23a79f94');
   }
-  
-  
-  /*Reading Mode*/
-  
-  
-  
-  
-  
+    
   /*--Blockquotes--*/
   .markdown-preview-view blockquote {}
+
   
-  
-  
-  
-  
-  /*--Tables--*/
+  /*«« Tables »»*/
   table {} /*Reading Mode*/
   
   /*Table Headers*/
-  table th {} /*Reading Mode*/
+  table th {
+    color: var(--color-ver-3);
+  } /*Reading Mode*/
   
   /***---Table Column---***/
   
 /***--DV BulletPoints--***/ /*Reading Mode*/
   table td {
-    color: var(--color-ver-5);
+    color: var(--color-tan-7);
   } 
   
   /***---Table Row | DataView---***/
@@ -717,7 +723,10 @@ background-color: var(--color-grey-0);
   table tr {
     color: var(--color-tan-5);
   } 
-  .cm-s-obsidian .HyperMD-table-row {} /*??*//*Source Mode*/
+  /*««Table Text»»*/ /*Source Mode*/
+  .cm-s-obsidian .HyperMD-table-row {
+    color: var(--color-ver-9);
+  } 
   
   
   
@@ -787,10 +796,7 @@ input.search-input {
   top: -6px;
   cursor: default;
 }
-.nav-file.is-active > .nav-file-title {
-  padding-left: 5px;
-  /* margin-left: 5px; */
-}
+
 /* condense line spacing on file explorer title list. also avoids character-level word breaks */
 .nav-file-title-content,
 .search-result-file-title,
