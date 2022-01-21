@@ -187,7 +187,7 @@
   
   /*Command Palette & Quick Switcher*/
   .prompt {
-    border-radius: 70px; /*««Rounding edges of CMDpalt & QSwitch»»*/
+    border-radius: 70px; /*««Rounding edges of CmdPalette & QSwitch»»*/
   }
   
   /*The notifications in the top right*/
@@ -242,7 +242,9 @@
   /***----Workspace----***/ /***--- (ICONS --> are at bottom of css file in an effort to make it easier to customize---***/
 
   /* ribbons, the thin vertical bars to the far left/right */
-  .workspace-ribbon {}
+  .workspace-ribbon {
+    color: var();
+  }
   
   /*** Gets rid of purple resize handle bar - set as same color as background to blend ≈ minimalism ***/
   .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle, .workspace-split.mod-left-split > .workspace-leaf-resize-handle, .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
@@ -256,7 +258,7 @@
   
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
   height: 1px !important;
-  background-color: var(--color-tan-9);
+  background-color: var(--color-grey-5);
 }
   /*Side Panels*/
   .workspace-tabs {}
@@ -277,10 +279,10 @@
 }
 
 .theme-dark .workspace-tab-header.is-active {
-    background: var(--color-d-gray-70);
+    background: var(--color-grey-7);
     box-shadow: 4px 8px 4px 4px
                 rgba(0, 0, 0, 0.445) inset,
-                4px 4px 4px 4px rgba(0, 0, 0, 0.445);
+                10px 8px 8px 4px rgba(0, 0, 0, 0.445);
 }
 /* left sidebar strip -- change background color */
 .workspace-ribbon.mod-left {
@@ -390,13 +392,13 @@ background-color: var(--color-grey-0);
 
   /*---- Change the ACTUAL Pointer Indicator in Folder_bar ----*/
   .nav-folder-collapse-indicator {
-    content: url('https://api.iconify.design/mdi/chart-donut.svg?color=%2383bdff&width=24&height=24');
+    content: url('https://api.iconify.design/mdi/chart-donut.svg?color=%2383bdff&  ');
     padding-left: 2px;
   }
   
   .nav-file-title.is-active .nav-folder-collapse-indicator, .nav-folder-title.is-active .nav-folder-collapse-indicator, body:not(.is-grabbing) .nav-file-title:hover .nav-folder-collapse-indicator, body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
     color: var(--text-normal);
-    content: url('https://api.iconify.design/mdi/chart-donut-variant.svg?color=%2383bdff&width=24&height=24');
+    content: url('https://api.iconify.design/mdi/chart-donut-variant.svg?color=%2383bdff&  ');
   }
 
 
@@ -947,20 +949,20 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
 .theme-dark
 .workspace-tab-header[aria-label="File explorer"]
 .workspace-tab-header-inner-icon:after {
-  content: url('https://api.iconify.design/mdi/ship-wheel.svg?color=%23a79f94&width=24&height=24');  
+  content: url('https://api.iconify.design/mdi/ship-wheel.svg?color=%23a79f94');  
 }
 
 .theme-dark
 .workspace-tab-header[aria-label="File explorer"]:hover
 .workspace-tab-header-inner-icon:after {  
-  content: url('https://api.iconify.design/mdi/ship-wheel.svg?color=white&width=24&height=24');  
+  content: url('https://api.iconify.design/mdi/ship-wheel.svg?color=white');  
 }
 
 /* when the tab is in focus */
 .theme-dark
 .workspace-tab-header[aria-label="File explorer"].is-active
 .workspace-tab-header-inner-icon:after {
-  content: url('https://api.iconify.design/mdi/ship-wheel.svg?color=%23a79f94&width=24&height=24');  
+  content: url('https://api.iconify.design/mdi/ship-wheel.svg?color=%23a79f94');  
 }
 
 .workspace-tab-header[aria-label="File explorer"]
@@ -983,21 +985,21 @@ height: 24px;
 .theme-dark
 .workspace-tab-header[aria-label="Search"]
 .workspace-tab-header-inner-icon:after {
-  content: url('https://api.iconify.design/mdi/incognito.svg?color=%23a79f94&width=24&height=24');
+  content: url('https://api.iconify.design/mdi/incognito.svg?color=%23a79f94');
   
 }
 
 .theme-dark
 .workspace-tab-header[aria-label="Search"]:hover
 .workspace-tab-header-inner-icon:after {  
-  content: url('https://api.iconify.design/mdi/incognito.svg?color=white&width=24&height=24');
+  content: url('https://api.iconify.design/mdi/incognito.svg?color=white');
 }
 
 /* when the tab is in focus */
 .theme-dark
 .workspace-tab-header[aria-label="Search"].is-active
 .workspace-tab-header-inner-icon:after {
-  content: url('https://api.iconify.design/mdi/incognito.svg?color=%236e655a&width=24&height=24');
+  content: url('https://api.iconify.design/mdi/incognito.svg?color=%236e655a');
 }
 
 .workspace-tab-header[aria-label="Search"]
@@ -1021,20 +1023,20 @@ height: 24px;
 .theme-dark
 .workspace-tab-header[aria-label="Recent Files"]
 .workspace-tab-header-inner-icon:after {
-  content: url('https://api.iconify.design/mdi/alarm-multiple.svg?color=%23a79f94&width=24&height=24');
+  content: url('https://api.iconify.design/mdi/alarm-multiple.svg?color=%23a79f94');
 }
 
 .theme-dark
 .workspace-tab-header[aria-label="Recent Files"]:hover
 .workspace-tab-header-inner-icon:after {  
-  content: url('https://api.iconify.design/mdi/alarm-multiple.svg?color=white&width=24&height=24');
+  content: url('https://api.iconify.design/mdi/alarm-multiple.svg?color=white');
 }
 
 /* when the tab is in focus */
 .theme-dark
 .workspace-tab-header[aria-label="Recent Files"].is-active
 .workspace-tab-header-inner-icon:after {
-  content: url('https://api.iconify.design/mdi/alarm-multiple.svg?color=%236e655a&width=24&height=24');
+  content: url('https://api.iconify.design/mdi/alarm-multiple.svg?color=%236e655a');
 }
 
 .workspace-tab-header[aria-label="Recent Files"]
@@ -1059,20 +1061,20 @@ height: 24px;
 .theme-dark
 .workspace-tab-header[aria-label="Starred"]
 .workspace-tab-header-inner-icon:after {
-  content: url('https://api.iconify.design/mdi/anchor.svg?color=%23a79f94&width=24&height=24');
+  content: url('https://api.iconify.design/ant-design/star-twotone.svg?color=%23a79f94');
 }
 
 .theme-dark
 .workspace-tab-header[aria-label="Starred"]:hover
 .workspace-tab-header-inner-icon:after {  
-  content: url('https://api.iconify.design/mdi/anchor.svg?color=white&width=24&height=24');
+  content: url('https://api.iconify.design/ant-design/star-twotone.svg?color=%23a79f94');
 }
 
 /* when the tab is in focus */
 .theme-dark
 .workspace-tab-header[aria-label="Starred"].is-active
 .workspace-tab-header-inner-icon:after {
-  content: url('https://api.iconify.design/mdi/anchor.svg?color=%23a79f94&width=24&height=24');
+  content: url('https://api.iconify.design/ant-design/star-twotone.svg?color=%23a79f94');
 }
 
 .workspace-tab-header[aria-label="Starred"]
@@ -1090,4 +1092,41 @@ height: 24px;
 .workspace-tab-header-inner-icon
 > svg {
   display: none;
+}
+
+/*«« Plug-In Support »»*/
+/*«« Andy's Sliding Mode »»*/
+/*────────────────────────────────────
+    Sliding Panes (Andy's Mode)
+────────────────────────────────────*/
+
+/* don't remove !important */
+body.plugin-sliding-panes-rotate-header .workspace
+> .mod-root
+> .workspace-leaf
+> .workspace-leaf-content
+> .view-header {
+    border-right: 1px solid var(--color-grey-9) !important;
+}
+
+/* don't remove !important */
+body.plugin-sliding-panes-rotate-header .mod-root
+> .workspace-leaf {
+    border-left: 1px solid var(--color-grey-9) !important;
+}
+
+body.plugin-sliding-panes-rotate-header
+.view-header-title-container::before {
+    display: none;
+}
+
+body.plugin-sliding-panes-rotate-header
+.view-header .view-action[aria-label="More options"] svg {
+    transform: rotate(90deg);
+    margin-bottom: 4px;
+}
+
+/* don't remove !important */
+body.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
+    box-shadow: none !important;
 }
