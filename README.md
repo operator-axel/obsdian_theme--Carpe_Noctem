@@ -8,4 +8,5 @@
 Will be continuing to improve and modify -- suggestions are always welcomed! 
 
 ![Carpe_Noctem_Screenshot](https://user-images.githubusercontent.com/77085081/150511527-740814b5-6d53-4d8d-b22f-c31dc0d0bfde.png)
-![Graphview-and-Menu Screenshot](https://user-images.githubusercontent.com/77085081/150502075-d6e47aa5-285c-46a0-a323-23788c317d69.png)
+
+![Carpe_NoctemGraphUpdated](https://user-images.githubusercontent.com/77085081/150623894-1512107f-e6b0-4ade-8799-c7c8ec9a4a81.png)
