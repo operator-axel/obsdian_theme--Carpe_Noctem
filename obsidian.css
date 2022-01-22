@@ -894,26 +894,30 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
   
   
   /*--Graph--*/
-
+  /*«« Light-Theme »»*/
+  .theme-light .graph-view.color-fill-tag { /*light mode tag color*/
+    color: #857f71;
+    }
+  .theme-light .graph-view.color-fill-attachment { /*light mode attachment color*/
+    color: #83D4F4;
+    }
+/*«« Dark & Both Graph »»*/
   .graph-view.color-fill {
   color: var(--color-white-7); /*color of nodes*/
   }
   .graph-view.color-fill-focused { /*color of focused node/note*/
   color: var(--color-ver-7);
   }
-  .theme-dark .graph-view.color-fill-tag { /*light mode tag color*/
-  color: var(--color-dt-blue-1);
+  .theme-dark .graph-view.color-fill-tag { /*dark mode tag color*/
+  color: var(--color-ver-9);
   }
-  .theme-light .graph-view.color-fill-tag { /*dark mode tag color*/
-  color: #857f71;
-  }
+  
   .theme-dark .graph-view.color-fill-attachment { /*dark mode attachment color*/
   color: var(--color-tan-9);
   }
-  .theme-light .graph-view.color-fill-attachment { /*light mode attachment color*/
-  color: #83D4F4;
+ 
   }
-  .graph-view.color-fill-unresolved { /*unresolved(not created yet) notes*/
+  .theme-dark.graph-view.color-fill-unresolved { /*unresolved(not created yet) notes*/
   color: var(--color-ver-9);
   opacity: 0.4;
   }
@@ -935,6 +939,9 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
   }
   .graph-view.color-line-highlight { /*focused node connections*/
   color: var(--interactive-accent);
+  }
+  .graph-view.color-line {
+    color: var(--color-dt-blue-1);
   }
   
   .graph-controls {} /*Graph Menu*/
@@ -1067,7 +1074,7 @@ height: 24px;
 .theme-dark
 .workspace-tab-header[aria-label="Starred"]:hover
 .workspace-tab-header-inner-icon:after {  
-  content: url('https://api.iconify.design/ant-design/star-twotone.svg?color=%23a79f94');
+  content: url('https://api.iconify.design/ant-design/star-twotone.svg?color=white');
 }
 
 /* when the tab is in focus */
